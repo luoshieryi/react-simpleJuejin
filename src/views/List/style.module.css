@@ -1,0 +1,117 @@
+.page-home {
+    display: flex;
+    flex-direction: column;
+    background-color:#f8f8f8;
+}
+
+.tabBox1 {
+    display: flex;
+    height: 10%;
+    background-color: #FFFFFF;
+}
+
+.tabBox2 {
+    display: flex;
+    height: 10%;
+    padding: 10px 5px 5px;
+}
+
+.tab1 {
+    margin: 10px 10px;
+    color: #606060;
+}
+
+.tab2 {
+    margin: 0 3px;
+    padding: 2px 6px 3px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    color: #606060;
+}
+
+.page-article {
+    flex-direction: column;
+    background-color: white;
+    margin: 5px 9px;
+    padding: 10px;
+    height: auto;
+}
+
+.tabBox-sort {
+    display: flex;
+    height: 32px;
+    margin: 0 0 -10px 0;
+}
+
+.tab-sort {
+    margin: 3px 0;
+    padding: 3px 10px;
+    border-width: 0 2px 0 0;
+    border-style: solid;
+    border-color: #eaeaea;
+}
+
+.li-card {
+    display: flex;
+    /*list-style: none;*/
+    /*box-shadow: 2px 2px 9px 0 #bbb;*/
+    /*border-radius: 10px;*/
+
+    border-color: #eaeaea;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    padding: 5px 5px;
+    margin: 20px 0;
+    position: absolute;
+    width: 98%;
+}
+
+.article {
+    text-align: left;
+    margin: auto;
+    width: 96%;
+}
+
+.author {
+    height: 10px;
+    font-size: 13px;
+    color: #404040;
+}
+
+.title {
+    font-size: 18px;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 15px 0 0 0;
+}
+
+.brief {
+    font-size: 14px;
+    color: #606060;
+    text-indent: 2em;
+
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow:hidden;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+}
+
+.time {
+    height: 10px;
+    font-size: 10px;
+    color: #606060;
+    margin: 0 0 10px 0;
+}
+
+.onload {
+    height: 100px;
+    padding: 45px;
+    text-align: center;
+    font-size: 10px;
+    color: #888;
+}

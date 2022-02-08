@@ -1,0 +1,91 @@
+.page {
+    flex-direction: column;
+    background-color: white;
+    margin: 12px 8px;
+    padding: 10px;
+    height: auto;
+}
+
+.author {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.roundAvatar {
+    height: 90%;
+    margin: 0 10px 0 5px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.name {
+    height: 10px;
+    font-size: 14px;
+    color: #444;
+    margin: 0 0 10px 0;
+}
+
+.time {
+    height: 10px;
+    font-size: 14px;
+    color: #606060;
+    margin: 0 0 10px 0;
+}
+
+.cover {
+    width: 100%;
+}
+
+.content {
+    border-bottom: 3px solid #eee;
+}
+
+.comment {
+    /*height: 50px;*/
+    margin: 10px;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainComment {
+    display: flex;
+}
+
+.commentAvatar {
+    height: 35px;
+    margin: 0 10px 0 5px;
+    border: 1px solid black;
+    border-radius: 100px;
+}
+
+.commentContent {
+    font-size: 16px;
+    color: #444;
+    margin: 10px 0 5px 0;
+}
+
+.commentTime {
+    height: 10px;
+    font-size: 10px;
+    color: #888;
+    margin: 10px 0 5px 0;
+}
+
+.subComment {
+    /*height: 50px;*/
+    margin: 10px 10px 0;
+    border-top: 1px solid #eee;
+    padding: 10px 10px 0;
+    display: flex;
+}
+
+.onload {
+    height: 100px;
+    font-size: 10px;
+    color: #888;
+}
