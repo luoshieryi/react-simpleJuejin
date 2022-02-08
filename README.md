@@ -41,12 +41,12 @@ function WithParams(): ReactElement {
 
 #### 参考
 
-[Forms and Events]: https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/#list-of-event-types
-[React Hook]: https://github.com/puxiao/react-hook-tutorial
-[https://github.com/puxiao/react-hook-tutorial]:  https://baurine.netlify.app/2020/04/26/pages-share-state/
-[React Component 生命周期]: https://zh-hans.reactjs.org/docs/react-component.html
-[React Contexts in TypeScript]: https://medium.com/@mtiller/react-contexts-in-typescript-1337abb2e5a7
-[React window 与IntersectionObserver API 实现无限卷动Dcard 文章阅读器之心得纪录]: https://oldmo860617.medium.com/react-window-%E8%88%87-intersectionobserver-api-%E5%AF%A6%E7%8F%BE%E7%84%A1%E9%99%90%E6%8D%B2%E5%8B%95-dcard-%E6%96%87%E7%AB%A0%E9%96%B1%E8%AE%80%E5%99%A8%E4%B9%8B%E5%BF%83%E5%BE%97%E7%B4%80%E9%8C%84-97bc1c3faa07
+- [Forms and Events](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/#list-of-event-types)
+- [React Hook](https://github.com/puxiao/react-hook-tutorial)
+- [React 页面间保存恢复状态的几种方法总结](https://baurine.netlify.app/2020/04/26/pages-share-state/)
+- [React Component 生命周期](https://zh-hans.reactjs.org/docs/react-component.html)
+- [React Contexts in TypeScript](https://medium.com/@mtiller/react-contexts-in-typescript-1337abb2e5a7)
+- [React window 与IntersectionObserver API 实现无限卷动Dcard 文章阅读器之心得纪录](https://oldmo860617.medium.com/react-window-%E8%88%87-intersectionobserver-api-%E5%AF%A6%E7%8F%BE%E7%84%A1%E9%99%90%E6%8D%B2%E5%8B%95-dcard-%E6%96%87%E7%AB%A0%E9%96%B1%E8%AE%80%E5%99%A8%E4%B9%8B%E5%BF%83%E5%BE%97%E7%B4%80%E9%8C%84-97bc1c3faa07)
 
 
 
