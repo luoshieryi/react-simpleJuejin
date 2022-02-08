@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+## react + ts 仿写一点点掘金
+From 字节校园镜像计划, 实现了主页与文章页 ( 的逻辑......css勉强满足基本功能 )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### 总结
 
-## Available Scripts
+无限滚动列表: 使用 IntersectionObserver
+1. articleList: 勉强实现了虚拟化列表,  实现: 
 
-In the project directory, you can run:
+   - 观察当前 top , bottom 元素, 分向上/下滚动两个事件, 重新渲染列表项
+   - 固定每项高度,  使用绝对定位, 额外添加空白元素撑高度
+   - - 存在 当前列表项高度设置过低时, observer事件反复触发的bug , 同时与页面尺寸, threshold 属性有关
 
-### `npm start`
+   ( *实现有些勉强)), 可拓展性/兼容性不太好*  )
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. commentList: flex布局, 底部添加 onloading 元素并观察
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+历史状态保存: 使用 Storage
 
-### `npm test`
+1.  浏览记录用 loaclStorage , 列表页的临时状态用 sessionStorage
+   1. 在 constructor 中读取并直接赋值  ( 在 componentDidMount() 中更新后会重复触发Update, 也许会有奇怪的问题 x )
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+接收参数: 套一层函数组件
 
-### `npm run build`
+```tsx
+function WithParams(): ReactElement {
+    return  (
+        <MyElement params={{id: "1", ...useParams()}} />
+    )
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### 碎碎念 ( x )
 
-### `npm run eject`
+1. ts 好麻烦好麻烦..... 尤其还是用了 class component
+   - 使用一个 state 要声明一遍, 初始化一遍, 赋值一遍, 三倍快乐))
+   - 对于 context, params 等参数, 要先声明类型再手动接收))
+   - 在 `import style from './style.module.scss'` 前加上 `@ts-ignore`
+   - 呜呜呜....
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 参考
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Forms and Events]: https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events/#list-of-event-types
+[React Hook]: https://github.com/puxiao/react-hook-tutorial
+[https://github.com/puxiao/react-hook-tutorial]:  https://baurine.netlify.app/2020/04/26/pages-share-state/
+[React Component 生命周期]: https://zh-hans.reactjs.org/docs/react-component.html
+[React Contexts in TypeScript]: https://medium.com/@mtiller/react-contexts-in-typescript-1337abb2e5a7
+[React window 与IntersectionObserver API 实现无限卷动Dcard 文章阅读器之心得纪录]: https://oldmo860617.medium.com/react-window-%E8%88%87-intersectionobserver-api-%E5%AF%A6%E7%8F%BE%E7%84%A1%E9%99%90%E6%8D%B2%E5%8B%95-dcard-%E6%96%87%E7%AB%A0%E9%96%B1%E8%AE%80%E5%99%A8%E4%B9%8B%E5%BF%83%E5%BE%97%E7%B4%80%E9%8C%84-97bc1c3faa07
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
