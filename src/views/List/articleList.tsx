@@ -241,8 +241,9 @@ class ArticleList extends Component<Props, State> {
         if (!history) {
             history = [];
         }
-        history.push(item);
-        localStorage.setItem("history", JSON.stringify(history));
+        let newHistory = [item];
+        newHistory = newHistory.concat(history);
+        localStorage.setItem("history", JSON.stringify(newHistory));
     }
 
     render() {
